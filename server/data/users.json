@@ -1,0 +1,29 @@
+[
+  {
+    "id": "u_1775398579272_apx38",
+    "name": "Test User",
+    "email": "test@gmail.com",
+    "role": "individual",
+    "avatarColor": "#c9a96e",
+    "createdAt": "2026-04-05T14:16:19.272Z",
+    "passwordHash": "$2a$12$LpwHQP50HJQawwA22WGuf.lmKASUHkmcyqLCEiv/v/TPBbXWtzbza"
+  },
+  {
+    "id": "u_1775398709397_ypi2g",
+    "name": "Thej",
+    "email": "24ug1bycs833@bmsit.in",
+    "role": "individual",
+    "avatarColor": "#c9a96e",
+    "createdAt": "2026-04-05T14:18:29.397Z",
+    "passwordHash": "$2a$12$1270ObiVqumj.N4oh63asuTea42oixteyDZTV0xOMuHGskirE1b0q"
+  },
+  {
+    "id": "u_1775399658578_5j1q5",
+    "name": "Thejaswini Bhat",
+    "email": "thejaswini.bhat.dev@gmail.com",
+    "role": "individual",
+    "avatarColor": "#c9a96e",
+    "createdAt": "2026-04-05T14:34:18.578Z",
+    "passwordHash": "$2a$12$B88de3sTyImA3/OPUiNU8Oa2Q3Pz9u69h4z4pTQYUxYw25DCuL/r6"
+  }
+]

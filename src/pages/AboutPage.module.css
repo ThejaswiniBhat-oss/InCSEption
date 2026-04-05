@@ -1,0 +1,82 @@
+.page {}
+
+.topBar {
+  display: flex; align-items: center; gap: 12px;
+  max-width: 600px; margin: 0 auto;
+  padding: 16px 16px 8px;
+}
+
+.backBtn {
+  display: flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 50%;
+  color: var(--text-secondary); flex-shrink: 0;
+  transition: background 0.2s, color 0.2s;
+}
+.backBtn:hover { background: var(--bg-elevated); color: var(--text-primary); }
+
+.pageTitle { font-size: 20px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; }
+
+.container {
+  max-width: 600px; margin: 0 auto;
+  padding: 8px 16px 48px;
+  display: flex; flex-direction: column; gap: 0;
+}
+
+/* Hero */
+.hero {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  padding: 24px 0 28px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+
+.logoRow { display: flex; align-items: center; gap: 12px; }
+.logoName { font-size: 28px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.03em; }
+.tagline { font-size: 14px; color: var(--accent); letter-spacing: 0.03em; }
+.version { font-size: 12px; color: var(--text-muted); }
+
+/* Info sections */
+.infoSection {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex; flex-direction: column; gap: 14px;
+}
+.infoSection:last-of-type { border-bottom: none; }
+
+.infoHeader { display: flex; align-items: center; gap: 10px; }
+.infoIcon { color: var(--accent); display: flex; flex-shrink: 0; }
+.infoTitle { font-size: 16px; font-weight: 700; color: var(--text-primary); }
+
+.infoBody {
+  display: flex; flex-direction: column; gap: 12px;
+  font-size: 14px; color: var(--text-secondary); line-height: 1.72;
+}
+
+.dotList {
+  display: flex; flex-direction: column; gap: 9px;
+  list-style: none; padding-left: 4px;
+}
+.dotList li {
+  padding-left: 16px;
+  position: relative;
+}
+.dotList li::before {
+  content: '·';
+  position: absolute; left: 0;
+  color: var(--accent); font-size: 18px; line-height: 1.4;
+}
+
+.numList {
+  display: flex; flex-direction: column; gap: 10px;
+  padding-left: 20px;
+}
+.numList li { line-height: 1.65; }
+
+/* Footer */
+.footer {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 24px 0 8px;
+  font-size: 13px; color: var(--text-muted);
+  text-align: center; line-height: 1.65;
+  border-top: 1px solid var(--border);
+}

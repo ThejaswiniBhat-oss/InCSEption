@@ -1,0 +1,35 @@
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--header-height);
+  background: rgba(9,8,10,0.92);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.inner {
+  display: flex; align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 600px; margin: 0 auto;
+  padding: 0 16px;
+}
+
+.left {
+  display: flex; align-items: center; gap: 9px;
+}
+
+.welcome {
+  font-size: 15px; font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.brand {
+  font-size: 13px; font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}

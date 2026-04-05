@@ -1,0 +1,79 @@
+.page {}
+
+.container {
+  max-width: 600px; margin: 0 auto;
+  padding: 20px 16px 40px;
+  display: flex; flex-direction: column; gap: 20px;
+}
+
+/* ── Profile header ──────────────────────────────────────────────────────── */
+.profileHeader {
+  display: flex; align-items: center; gap: 16px;
+  padding: 16px 0 4px;
+}
+
+.avatar {
+  width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0;
+  background: var(--accent-dim); border: 2px solid var(--accent);
+  color: var(--accent); font-size: 26px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.nameGroup { display: flex; flex-direction: column; gap: 4px; }
+.name      { font-size: 20px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; }
+.email     { font-size: 13px; color: var(--text-muted); }
+.roleBadge { margin-top: 4px; width: fit-content; }
+
+/* ── Sections ────────────────────────────────────────────────────────────── */
+.section { display: flex; flex-direction: column; gap: 8px; }
+
+.sectionLabel {
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--text-muted); padding: 0 4px;
+}
+
+/* ── Role chips ──────────────────────────────────────────────────────────── */
+.roleGrid { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.roleChip {
+  font-size: 13px; font-weight: 500;
+  padding: 7px 14px; border-radius: var(--radius-full);
+  background: var(--bg-surface); border: 1.5px solid var(--border);
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+.roleChip:hover { border-color: var(--border-strong); }
+.roleChipActive {
+  background: var(--accent-dim);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── Menu items ──────────────────────────────────────────────────────────── */
+.menuItem {
+  display: flex; align-items: center; gap: 14px;
+  width: 100%; padding: 14px 16px;
+  background: none; border: none; cursor: pointer;
+  text-align: left; transition: background 0.15s;
+}
+.menuItem:hover { background: var(--bg-elevated); }
+.menuIcon  { color: var(--text-secondary); flex-shrink: 0; display: flex; }
+.menuLabel { flex: 1; font-size: 15px; color: var(--text-primary); }
+.menuRight { color: var(--text-muted); display: flex; align-items: center; }
+
+.menuItem.danger .menuLabel { color: var(--danger); }
+.menuItem.danger .menuIcon  { color: var(--danger); }
+
+.divider { height: 1px; background: var(--border); margin: 0 16px; }
+
+/* ── About card ──────────────────────────────────────────────────────────── */
+.aboutCard {
+  padding: 16px;
+  display: flex; flex-direction: column; gap: 5px; align-items: center;
+  text-align: center;
+}
+.aboutLogo    { display: flex; align-items: center; gap: 9px; }
+.aboutName    { font-size: 17px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; }
+.aboutTagline { font-size: 12px; color: var(--accent); letter-spacing: 0.02em; }
+.aboutVersion { font-size: 11px; color: var(--text-muted); }

@@ -1,0 +1,76 @@
+.page {}
+
+.container {
+  max-width: 600px; margin: 0 auto;
+  padding: 20px 16px 40px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+
+.pageHeader { display: flex; flex-direction: column; gap: 5px; }
+
+.pageTitle {
+  font-size: 22px; font-weight: 700;
+  color: var(--text-primary); letter-spacing: -0.02em;
+}
+
+.pageSub { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+
+.list { display: flex; flex-direction: column; gap: 10px; }
+
+.card {
+  padding: 16px;
+  display: flex; flex-direction: column; gap: 10px;
+  transition: border-color 0.2s;
+}
+.card.running { border-color: var(--info); }
+
+.cardHeader { display: flex; flex-direction: column; gap: 5px; }
+
+.nameRow { display: flex; align-items: center; gap: 8px; }
+
+.pulse {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--info);
+  animation: pulseDot 1.4s ease-in-out infinite;
+}
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.3; transform: scale(0.65); }
+}
+
+.agentName { font-size: 15px; font-weight: 600; color: var(--text-primary); }
+.agentDesc { font-size: 12px; color: var(--text-secondary); line-height: 1.55; }
+
+.detail {
+  font-size: 12px; color: var(--text-secondary);
+  background: var(--bg-elevated);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  border-left: 2px solid var(--accent);
+  line-height: 1.55;
+}
+
+.lastRun { font-size: 11px; color: var(--text-muted); }
+
+.logsToggle {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 12px; font-weight: 600;
+  color: var(--accent); background: none; border: none;
+  cursor: pointer; transition: opacity 0.2s;
+}
+.logsToggle:hover { opacity: 0.7; }
+
+.chevron { transition: transform 0.2s; }
+.chevronOpen { transform: rotate(180deg); }
+
+.logs {
+  background: #06070a;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+  font-size: 11px; color: #7a7060; line-height: 1.75;
+  overflow-x: auto; white-space: pre;
+}
+
+.center { display: flex; justify-content: center; padding: 40px 0; }

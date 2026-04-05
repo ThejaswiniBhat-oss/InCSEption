@@ -1,0 +1,81 @@
+.page {
+  position: fixed; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: space-between;
+  overflow: hidden;
+}
+
+/* ── Brand (top-centre) ──────────────────────────────────────────────────── */
+.brand {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  padding-top: calc(56px + env(safe-area-inset-top, 0px));
+}
+
+.logoRow {
+  display: flex; align-items: center; gap: 13px;
+}
+
+.wordmark {
+  font-size: 34px; font-weight: 700;
+  color: #ede8de; letter-spacing: -0.035em;
+}
+
+.tagline {
+  font-size: 14px;
+  color: rgba(201, 169, 110, 0.75);
+  letter-spacing: 0.04em;
+}
+
+/* ── CTA panel (bottom-centre) ───────────────────────────────────────────── */
+.bottom {
+  position: relative; z-index: 2;
+  width: 100%; max-width: 400px;
+  padding: 0 24px calc(44px + env(safe-area-inset-bottom, 0px));
+}
+
+.ctaGroup { display: flex; flex-direction: column; gap: 11px; }
+
+.mainBtn { font-size: 16px !important; letter-spacing: 0.01em; }
+
+.legal {
+  font-size: 11px; color: #5a5046;
+  text-align: center; line-height: 1.65;
+  margin-top: 4px;
+}
+
+/* ── Auth form ───────────────────────────────────────────────────────────── */
+.form { display: flex; flex-direction: column; gap: 13px; }
+
+.backBtn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; color: #9a8e7a;
+  background: none; border: none; cursor: pointer;
+  padding: 4px 0; width: fit-content;
+  transition: color 0.2s;
+}
+.backBtn:hover { color: #ede8de; }
+
+.formTitle {
+  font-size: 24px; font-weight: 700;
+  color: #ede8de; letter-spacing: -0.025em;
+}
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+
+.label { font-size: 12px; font-weight: 600; color: #9a8e7a; letter-spacing: 0.04em; text-transform: uppercase; }
+
+.error {
+  font-size: 13px; color: #c4665a;
+  background: rgba(196,102,90,0.12);
+  border-radius: 8px; padding: 10px 13px;
+  border-left: 2px solid #c4665a;
+}
+
+.switchBtn {
+  font-size: 13px; color: #9a8e7a;
+  text-align: center; background: none; border: none;
+  cursor: pointer; padding: 2px 0;
+  transition: color 0.2s;
+}
+.switchBtn:hover { color: #c9a96e; }

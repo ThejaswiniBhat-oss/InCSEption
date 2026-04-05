@@ -1,0 +1,38 @@
+.bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.base {
+  position: absolute;
+  inset: 0;
+  background: #09080a;
+}
+
+.grain {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  opacity: 0.032;
+  mix-blend-mode: overlay;
+}
+
+.scrimTop {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 240px;
+  background: linear-gradient(to bottom, rgba(9,8,10,0.90) 0%, transparent 100%);
+}
+
+.scrimBottom {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 320px;
+  background: linear-gradient(to top, rgba(9,8,10,0.92) 0%, transparent 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grain { opacity: 0.015; }
+}

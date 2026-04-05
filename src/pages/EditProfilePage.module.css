@@ -1,0 +1,66 @@
+.page {}
+
+.topBar {
+  display: flex; align-items: center; gap: 12px;
+  max-width: 600px; margin: 0 auto;
+  padding: 16px 16px 8px;
+}
+
+.backBtn {
+  display: flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 50%;
+  color: var(--text-secondary);
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+.backBtn:hover { background: var(--bg-elevated); color: var(--text-primary); }
+
+.pageTitle { font-size: 20px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; }
+
+.form {
+  max-width: 600px; margin: 0 auto;
+  padding: 8px 16px 40px;
+  display: flex; flex-direction: column; gap: 20px;
+}
+
+.avatarSection {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  padding: 16px 0 4px;
+}
+
+.avatar {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: var(--accent-dim); border: 2px solid var(--accent);
+  color: var(--accent); font-size: 28px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.avatarHint { font-size: 12px; color: var(--text-muted); }
+
+.section { display: flex; flex-direction: column; gap: 8px; }
+
+.sectionLabel {
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--text-muted); padding: 0 4px;
+}
+
+.fieldWrap { padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+
+.label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); }
+
+.divider { height: 1px; background: var(--border); }
+
+.hint { font-size: 12px; color: var(--text-muted); padding: 0 4px; }
+
+.error {
+  font-size: 13px; color: var(--danger);
+  background: var(--danger-dim); border-radius: var(--radius);
+  padding: 11px 14px; border-left: 2px solid var(--danger);
+}
+
+.success {
+  font-size: 13px; color: var(--success);
+  background: var(--success-dim); border-radius: var(--radius);
+  padding: 11px 14px; border-left: 2px solid var(--success);
+}

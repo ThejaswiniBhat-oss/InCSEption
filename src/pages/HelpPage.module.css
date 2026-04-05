@@ -1,0 +1,88 @@
+.page {}
+
+.topBar {
+  display: flex; align-items: center; gap: 12px;
+  max-width: 600px; margin: 0 auto;
+  padding: 16px 16px 8px;
+}
+
+.backBtn {
+  display: flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 50%;
+  color: var(--text-secondary); flex-shrink: 0;
+  transition: background 0.2s, color 0.2s;
+}
+.backBtn:hover { background: var(--bg-elevated); color: var(--text-primary); }
+
+.pageTitle { font-size: 20px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; }
+
+.container {
+  max-width: 600px; margin: 0 auto;
+  padding: 12px 16px 48px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+
+/* Contact */
+.contactCard { padding: 0; overflow: hidden; }
+
+.contactRow {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px;
+}
+
+.contactIcon {
+  width: 36px; height: 36px; border-radius: var(--radius);
+  background: var(--accent-dim); color: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.contactLabel { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); }
+.contactValue { font-size: 15px; font-weight: 600; color: var(--text-primary); margin-top: 2px; }
+.contactNote  { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+.cardDivider { height: 1px; background: var(--border); }
+
+/* Section headers */
+.sectionHeader { margin-top: 8px; }
+.sectionTitle { font-size: 16px; font-weight: 700; color: var(--text-primary); }
+
+/* Steps */
+.stepsCard { padding: 0; }
+
+.step {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.step:last-child { border-bottom: none; }
+
+.stepNum {
+  width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+  background: var(--accent); color: #0a0806;
+  font-size: 13px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.stepTitle { font-size: 14px; font-weight: 600; color: var(--text-primary); }
+.stepDesc  { font-size: 13px; color: var(--text-secondary); line-height: 1.55; margin-top: 3px; }
+
+/* FAQ */
+.faqItem { padding: 0; }
+
+.faqQ {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; padding: 15px 16px;
+  font-size: 14px; font-weight: 500; color: var(--text-primary);
+  text-align: left; background: none; border: none; cursor: pointer;
+  gap: 12px;
+}
+.faqQ:hover { color: var(--accent); }
+
+.chevron { color: var(--text-muted); transition: transform 0.2s; flex-shrink: 0; }
+.chevronOpen { transform: rotate(180deg); }
+
+.faqA {
+  font-size: 13px; color: var(--text-secondary); line-height: 1.68;
+  padding: 0 16px 16px;
+}
