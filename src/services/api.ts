@@ -10,10 +10,8 @@ import type {
 } from '../types/api';
 import {
   MOCK_SCHEMES,
-  MOCK_MY_SCHEMES,
   MOCK_AGENTS,
   MOCK_REQUIREMENTS,
-  MOCK_VERIFY_OUTCOME,
 } from '../mocks/data';
 
 const AUTH_URL  = import.meta.env.VITE_API_URL ?? 'http://localhost:3001/api';
@@ -99,7 +97,6 @@ export async function fetchSchemeById(id: string): Promise<Scheme> {
 // ─── My Schemes ───────────────────────────────────────────────────────────────
 
 export async function fetchMySchemes(): Promise<MyScheme[]> {
-  if (USE_MOCK) { await delay(); return MOCK_MY_SCHEMES; }
   return authRequest('/my-schemes');
 }
 
@@ -111,20 +108,18 @@ export async function fetchRequirements(schemeId: string): Promise<ApplicationRe
 }
 
 export async function submitApplication(data: ApplicationSubmission): Promise<{ applicationId: string }> {
-  if (USE_MOCK) {
-    await delay(1400);
-    return { applicationId: `TG-${new Date().getFullYear()}-${Math.floor(10000 + Math.random() * 89999)}` };
-  }
-  const form = new FormData();
-  Object.entries(data.formData).forEach(([k, v]) => form.append(k, v as string | Blob));
-  return authRequest(`/schemes/${data.schemeId}/apply`, { method: 'POST', body: form, headers: {} });
+  // Always hits real server — eligibility + dedup checked server-side
+  return authRequest('/applications/submit', {
+    method: 'POST',
+    body: JSON.stringify({ schemeId: data.schemeId, formData: data.formData }),
+  });
 }
 
 // ─── Verify ───────────────────────────────────────────────────────────────────
 
 export async function fetchVerifyOutcome(applicationId: string): Promise<VerifyOutcome> {
-  if (USE_MOCK) { await delay(1600); return { ...MOCK_VERIFY_OUTCOME, applicationId }; }
-  return authRequest(`/applications/${applicationId}/verify`);
+  // Always hits real server — returns actual decision stored at submission time
+  return authRequest(`/applications/${applicationId}`);
 }
 
 // ─── Agents ───────────────────────────────────────────────────────────────────

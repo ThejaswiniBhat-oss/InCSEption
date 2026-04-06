@@ -1,0 +1,79 @@
+[
+  {
+    "applicationId": "TG-2026-13393",
+    "schemeId": "s1",
+    "userId": "u_1775456189846_akgdv",
+    "decision": "approved",
+    "score": 100,
+    "flagCount": 0,
+    "timestamp": "2026-04-06T06:16:30.010Z",
+    "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "hash": "fa374b970cf45c9d19d75ed6b776b5a71ddb01c7a0ab7821c57fd862a21bd1fc"
+  },
+  {
+    "applicationId": "TG-2026-41303",
+    "schemeId": "s1",
+    "userId": "u_1775456189846_akgdv",
+    "decision": "blocked",
+    "score": 0,
+    "flagCount": 1,
+    "timestamp": "2026-04-06T06:16:49.183Z",
+    "previousHash": "fa374b970cf45c9d19d75ed6b776b5a71ddb01c7a0ab7821c57fd862a21bd1fc",
+    "hash": "d55834755ef821fe1c66d85fc68df7d654ab78a4892d632f89f805323207d409"
+  },
+  {
+    "applicationId": "TG-2026-99864",
+    "schemeId": "s6",
+    "userId": "u_1775456189846_akgdv",
+    "decision": "blocked",
+    "score": 50,
+    "flagCount": 1,
+    "timestamp": "2026-04-06T06:16:49.689Z",
+    "previousHash": "d55834755ef821fe1c66d85fc68df7d654ab78a4892d632f89f805323207d409",
+    "hash": "876d5757cd8ecd0484137d7848a4c1730d34abd61a545ca0932c2b52941eb7ce"
+  },
+  {
+    "applicationId": "TG-2026-52021",
+    "schemeId": "s1",
+    "userId": "u_1775399658578_5j1q5",
+    "decision": "blocked",
+    "score": 30,
+    "flagCount": 2,
+    "timestamp": "2026-04-06T06:19:35.873Z",
+    "previousHash": "876d5757cd8ecd0484137d7848a4c1730d34abd61a545ca0932c2b52941eb7ce",
+    "hash": "f67a657250069c03af8483543ce8c6d099dbf8c0a40b7ad51b9c8fb24acd6e10"
+  },
+  {
+    "applicationId": "TG-2026-18675",
+    "schemeId": "s1",
+    "userId": "u_1775399658578_5j1q5",
+    "decision": "blocked",
+    "score": 0,
+    "flagCount": 1,
+    "timestamp": "2026-04-06T06:21:38.204Z",
+    "previousHash": "f67a657250069c03af8483543ce8c6d099dbf8c0a40b7ad51b9c8fb24acd6e10",
+    "hash": "aab9ad7c3a6845c7668419b447b5d0af9806a631a2697f709db28bbab7ae668c"
+  },
+  {
+    "applicationId": "TG-2026-56565",
+    "schemeId": "s5",
+    "userId": "u_1775399658578_5j1q5",
+    "decision": "blocked",
+    "score": 20,
+    "flagCount": 2,
+    "timestamp": "2026-04-06T06:24:09.212Z",
+    "previousHash": "aab9ad7c3a6845c7668419b447b5d0af9806a631a2697f709db28bbab7ae668c",
+    "hash": "599eb5bbf8ccb266044b15a639dcea6592fe44f9bf1b6053d348fc2031884a15"
+  },
+  {
+    "applicationId": "TG-2026-78729",
+    "schemeId": "s1",
+    "userId": "u_1775399658578_5j1q5",
+    "decision": "approved",
+    "score": 100,
+    "flagCount": 0,
+    "timestamp": "2026-04-06T06:57:50.682Z",
+    "previousHash": "599eb5bbf8ccb266044b15a639dcea6592fe44f9bf1b6053d348fc2031884a15",
+    "hash": "50af33e9b2b7f1246da37fe102dee1f4dfa36aad56b280c9f078610eacb6d37e"
+  }
+]

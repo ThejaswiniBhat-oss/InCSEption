@@ -103,3 +103,43 @@
   display: flex; flex-direction: column; align-items: center; gap: 16px;
   padding: 48px 16px; color: var(--text-secondary); font-size: 15px; text-align: center;
 }
+
+/* ── Language selector ───────────────────────────────────────────────────── */
+.filtersRow {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; flex-wrap: wrap;
+}
+.langWrap { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+.langLabel { font-size: 11px; color: var(--text-muted); white-space: nowrap; }
+.langSelect {
+  font-size: 12px; padding: 4px 8px; border-radius: 8px;
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text-primary); cursor: pointer;
+}
+
+/* ── Admin dashboard ─────────────────────────────────────────────────────── */
+.adminWrap { padding: 8px 0; }
+.adminTitle { font-size: 20px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+.adminSub   { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; }
+
+.tableWrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--border); }
+.table {
+  width: 100%; border-collapse: collapse; font-size: 13px;
+  background: var(--surface);
+}
+.table th {
+  padding: 10px 14px; text-align: left; font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--text-muted); border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+}
+.table td {
+  padding: 10px 14px; border-bottom: 1px solid var(--border);
+  color: var(--text-primary); vertical-align: middle;
+}
+.table tr:last-child td { border-bottom: none; }
+.table tbody tr:hover { background: rgba(255,255,255,0.02); }
+.tdName { font-weight: 500; max-width: 200px; }
+.tdNum  { font-weight: 600; color: var(--accent); }
+.tdBadge { font-size: 11px; }
+.tdEmpty { text-align: center; color: var(--text-muted); padding: 32px; }

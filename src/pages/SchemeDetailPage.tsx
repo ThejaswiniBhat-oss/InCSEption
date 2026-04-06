@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchSchemeById } from '../services/api';
 import type { Scheme } from '../types/api';
+import type { Lang } from '../locales/schemeTranslations';
+import { getSchemeLocale, UI_STRINGS } from '../locales/schemeTranslations';
 import styles from './SchemeDetailPage.module.css';
 
 function BackButton() {
@@ -40,6 +42,8 @@ export default function SchemeDetailPage() {
   const [scheme, setScheme] = useState<Scheme | null>(null);
   const [loading, setLoading] = useState(true);
   const [simplified, setSimplified] = useState(false);
+  const lang = (localStorage.getItem('tg-lang') as Lang) ?? 'en';
+  const locale = scheme ? getSchemeLocale(scheme.id, lang) : null;
 
   useEffect(() => {
     if (!id) return;
@@ -80,7 +84,7 @@ export default function SchemeDetailPage() {
         {/* Hero */}
         <div className={styles.hero}>
           <span className={styles.category}>{scheme.category}</span>
-          <h1 className={styles.title}>{scheme.title}</h1>
+          <h1 className={styles.title}>{locale?.title ?? scheme.title}</h1>
           <p className={styles.ministry}>{scheme.ministry}</p>
           {scheme.amount && (
             <span className={styles.amount}>{scheme.amount}</span>
@@ -99,17 +103,19 @@ export default function SchemeDetailPage() {
         {/* Description */}
         <Section title="Description">
           <p className={styles.bodyText}>
-            {simplified ? scheme.simplifiedDescription : scheme.description}
+            {simplified
+              ? (locale?.simplified ?? scheme.simplifiedDescription)
+              : (locale ? locale.simplified : scheme.description)}
           </p>
         </Section>
 
         <Section title="Who can apply">
-          <p className={styles.bodyText}>{scheme.whoCanApply}</p>
+          <p className={styles.bodyText}>{locale?.whoCanApply ?? scheme.whoCanApply}</p>
         </Section>
 
         <Section title="Eligibility criteria">
           <ul className={styles.list}>
-            {scheme.criteria.map((c, i) => (
+            {(locale?.criteria ?? scheme.criteria).map((c, i) => (
               <li key={i} className={styles.listItem}>
                 <span className={styles.bullet} aria-hidden="true">•</span>
                 {c}
@@ -120,7 +126,7 @@ export default function SchemeDetailPage() {
 
         <Section title="Benefits">
           <ul className={styles.list}>
-            {scheme.benefits.map((b, i) => (
+            {(locale?.benefits ?? scheme.benefits).map((b, i) => (
               <li key={i} className={styles.listItem}>
                 <svg className={styles.checkIcon} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <polyline points="20 6 9 17 4 12"/>
@@ -133,7 +139,7 @@ export default function SchemeDetailPage() {
 
         <Section title="Clauses & conditions">
           <ul className={styles.list}>
-            {scheme.clauses.map((c, i) => (
+            {(locale?.clauses ?? scheme.clauses).map((c, i) => (
               <li key={i} className={styles.listItem}>
                 <span className={styles.bullet} aria-hidden="true">—</span>
                 {c}
@@ -154,7 +160,7 @@ export default function SchemeDetailPage() {
             className="btn btn--primary btn--full"
             onClick={() => navigate(`/scheme/${scheme.id}/apply`)}
           >
-            Apply now
+            {UI_STRINGS[lang].applyNow}
           </button>
         </div>
       </div>

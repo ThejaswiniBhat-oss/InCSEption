@@ -1,0 +1,139 @@
+[
+  {
+    "applicationId": "TG-2026-13393",
+    "schemeId": "s1",
+    "userId": "u_1775456189846_akgdv",
+    "aadhaarHash": "086271cabae79eefaf16e36b22ca2ae89ddc8d0e37e6265fc2937be891a155d9",
+    "applicantName": "Ravi Kumar",
+    "status": "approved",
+    "score": 100,
+    "flags": [],
+    "justificationPoints": [
+      "Aadhaar identity verified — no existing registrations found across any scheme database.",
+      "Annual income ₹1,50,000 is within scheme ceiling of ₹8,00,000 — income eligibility confirmed.",
+      "Age 40 years is within the scheme's eligible age bracket (min 18 years).",
+      "Aadhaar number format validated (12-digit numeric). Document authenticity check passed.",
+      "All eligibility criteria satisfied. Application forwarded for final officer review and fund disbursement authorisation."
+    ],
+    "submittedAt": "2026-04-06T06:16:30.010Z"
+  },
+  {
+    "applicationId": "TG-2026-41303",
+    "schemeId": "s1",
+    "userId": "u_1775456189846_akgdv",
+    "aadhaarHash": "086271cabae79eefaf16e36b22ca2ae89ddc8d0e37e6265fc2937be891a155d9",
+    "applicantName": "Ravi Kumar",
+    "status": "blocked",
+    "score": 0,
+    "flags": [
+      "aadhaar_duplicate"
+    ],
+    "justificationPoints": [
+      "Duplicate application detected — Aadhaar already registered for scheme \"PM-KISAN Samman Nidhi\". Reference: TG-2026-13393.",
+      "Annual income ₹1,50,000 is within scheme ceiling of ₹8,00,000 — income eligibility confirmed.",
+      "Age 40 years is within the scheme's eligible age bracket (min 18 years).",
+      "Application has been BLOCKED — duplicate Aadhaar registration is a direct violation of single-beneficiary policy."
+    ],
+    "submittedAt": "2026-04-06T06:16:49.183Z"
+  },
+  {
+    "applicationId": "TG-2026-99864",
+    "schemeId": "s6",
+    "userId": "u_1775456189846_akgdv",
+    "aadhaarHash": "2dd9ce13e5c296fe2d1d203b9dd9022977c671051ad3d4cf143ee3ae585ca5b6",
+    "applicantName": "Priya Sharma",
+    "status": "blocked",
+    "score": 50,
+    "flags": [
+      "category_mismatch"
+    ],
+    "justificationPoints": [
+      "Aadhaar identity verified — no existing registrations found across any scheme database.",
+      "Annual income ₹3,00,000 is within scheme ceiling of ₹8,00,000 — income eligibility confirmed.",
+      "Age 26 years is within the scheme's eligible age bracket (min 18 years).",
+      "Social category 'General' does not meet the scheme requirement (OBC only). Application ineligible on category grounds.",
+      "Aadhaar number format validated (12-digit numeric). Document authenticity check passed.",
+      "Application has been BLOCKED pending resolution of the above eligibility failures. Applicant may appeal with supporting documents."
+    ],
+    "submittedAt": "2026-04-06T06:16:49.689Z"
+  },
+  {
+    "applicationId": "TG-2026-52021",
+    "schemeId": "s1",
+    "userId": "u_1775399658578_5j1q5",
+    "aadhaarHash": "0d4f32b4716a612410f6fbbdd92b3424fb76ff75abd42babc3137ef5de79286c",
+    "applicantName": "Thejaswini V Bhat",
+    "status": "blocked",
+    "score": 30,
+    "flags": [
+      "age_below_minimum",
+      "aadhaar_invalid_format"
+    ],
+    "justificationPoints": [
+      "Aadhaar identity verified — no existing registrations found across any scheme database.",
+      "Annual income ₹1,999 is within scheme ceiling of ₹8,00,000 — income eligibility confirmed.",
+      "Age 1 years is below the minimum requirement of 18 years for this scheme.",
+      "Aadhaar number format is invalid — must be exactly 12 digits. Document authenticity check failed.",
+      "Application has been BLOCKED pending resolution of the above eligibility failures. Applicant may appeal with supporting documents."
+    ],
+    "submittedAt": "2026-04-06T06:19:35.873Z"
+  },
+  {
+    "applicationId": "TG-2026-18675",
+    "schemeId": "s1",
+    "userId": "u_1775399658578_5j1q5",
+    "aadhaarHash": "086271cabae79eefaf16e36b22ca2ae89ddc8d0e37e6265fc2937be891a155d9",
+    "applicantName": "Thejaswini V Bhat",
+    "status": "blocked",
+    "score": 0,
+    "flags": [
+      "aadhaar_duplicate"
+    ],
+    "justificationPoints": [
+      "Duplicate application detected — Aadhaar already registered for scheme \"PM-KISAN Samman Nidhi\". Reference: TG-2026-13393.",
+      "Annual income ₹50,000 is within scheme ceiling of ₹8,00,000 — income eligibility confirmed.",
+      "Age 20 years is within the scheme's eligible age bracket (min 18 years).",
+      "Application has been BLOCKED — duplicate Aadhaar registration is a direct violation of single-beneficiary policy."
+    ],
+    "submittedAt": "2026-04-06T06:21:38.204Z"
+  },
+  {
+    "applicationId": "TG-2026-56565",
+    "schemeId": "s5",
+    "userId": "u_1775399658578_5j1q5",
+    "aadhaarHash": "aee275d256cf285e4516b3b14750738939392bc3038df121e482d63cd175c02a",
+    "applicantName": "Thejaswini ",
+    "status": "blocked",
+    "score": 20,
+    "flags": [
+      "income_exceeded",
+      "aadhaar_invalid_format"
+    ],
+    "justificationPoints": [
+      "Aadhaar identity verified — no existing registrations found across any scheme database.",
+      "Annual income ₹1,99,59,996 exceeds scheme ceiling of ₹2,00,000 — applicant is ineligible on income grounds.",
+      "Age 30 years is within the scheme's eligible age bracket (min 18 years).",
+      "Aadhaar number format is invalid — must be exactly 12 digits. Document authenticity check failed.",
+      "Application has been BLOCKED pending resolution of the above eligibility failures. Applicant may appeal with supporting documents."
+    ],
+    "submittedAt": "2026-04-06T06:24:09.212Z"
+  },
+  {
+    "applicationId": "TG-2026-78729",
+    "schemeId": "s1",
+    "userId": "u_1775399658578_5j1q5",
+    "aadhaarHash": "1adef9809b724faa787397cb30caff48f876e907fd7960fcb4ea7fe1bc1d1f3e",
+    "applicantName": "Thejaswini V Bhat",
+    "status": "approved",
+    "score": 100,
+    "flags": [],
+    "justificationPoints": [
+      "Aadhaar identity verified — no existing registrations found across any scheme database.",
+      "Annual income ₹1,233 is within scheme ceiling of ₹8,00,000 — income eligibility confirmed.",
+      "Age 20 years is within the scheme's eligible age bracket (min 18 years).",
+      "Aadhaar number format validated (12-digit numeric). Document authenticity check passed.",
+      "All eligibility criteria satisfied. Application forwarded for final officer review and fund disbursement authorisation."
+    ],
+    "submittedAt": "2026-04-06T06:57:50.682Z"
+  }
+]

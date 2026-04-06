@@ -1,8 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import type { Scheme } from '../../types/api';
+import type { Lang } from '../../locales/schemeTranslations';
+import { getSchemeLocale, UI_STRINGS } from '../../locales/schemeTranslations';
 import styles from './SchemeCard.module.css';
 
-interface Props { scheme: Scheme; }
+interface Props { scheme: Scheme; lang?: Lang; }
 
 const CATEGORY_COLORS: Record<string, string> = {
   Agriculture:     '#7aad5c',
@@ -15,15 +17,18 @@ const CATEGORY_COLORS: Record<string, string> = {
   Healthcare:      '#ba6a7a',
 };
 
-export default function SchemeCard({ scheme }: Props) {
+export default function SchemeCard({ scheme, lang = 'en' }: Props) {
   const navigate = useNavigate();
   const color = CATEGORY_COLORS[scheme.category] ?? '#6366f1';
+  const locale = getSchemeLocale(scheme.id, lang);
+  const title = locale?.title ?? scheme.title;
+  const desc  = locale?.simplified ?? scheme.simplifiedDescription ?? scheme.description.slice(0, 110);
 
   return (
     <button
       className={styles.card}
       onClick={() => navigate(`/scheme/${scheme.id}`)}
-      aria-label={`View details for ${scheme.title}`}
+      aria-label={`View details for ${title}`}
     >
       <div className={styles.top}>
         <span className={styles.category} style={{ color, background: `${color}18` }}>
@@ -31,11 +36,11 @@ export default function SchemeCard({ scheme }: Props) {
         </span>
         {scheme.amount && <span className={styles.amount}>{scheme.amount}</span>}
       </div>
-      <h3 className={styles.title}>{scheme.title}</h3>
+      <h3 className={styles.title}>{title}</h3>
       <p className={styles.ministry}>{scheme.ministry}</p>
-      <p className={styles.desc}>{scheme.description.slice(0, 110)}…</p>
+      <p className={styles.desc}>{desc.slice(0, 120)}{desc.length > 120 ? '…' : ''}</p>
       <div className={styles.footer}>
-        <span className={`badge badge--success`}>Active</span>
+        <span className={`badge badge--success`}>{UI_STRINGS[lang].applyNow}</span>
         <span className={styles.deadline}>
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
